@@ -1,6 +1,8 @@
 # F1 Quiz via CLI
 
-A command-line quiz application focused on Formula 1 trivia.
+**A command-line quiz game about Formula 1 trivia.**
+
+![CLI Screenshot](cli.png)
 
 ## Features
 

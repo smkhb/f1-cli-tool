@@ -7,13 +7,13 @@ import figlet from "figlet";
 import { createSpinner } from "nanospinner";
 
 let playerName;
-
-const sleep = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
 let points = 0;
+const sleep = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
+const upperFirstLettter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 async function welcome() {
   figlet(
-    "Welcome \n to the \n F1 Quiz",
+    "\nWelcome \n to the \n F1 Quiz",
     {
       font: "Ghost",
       horizontalLayout: "fitted",
@@ -52,12 +52,15 @@ async function rules() {
 }
 
 async function askName() {
-  playerName = await input({
-    message: "What is your name?",
-    default() {
-      return "Franz Hermann";
-    },
-  });
+  playerName = upperFirstLettter(
+    await input({
+      message: "What is your name?",
+      default() {
+        return "Franz Hermann";
+      },
+    })
+  );
+
   const nameRainbow = chalkAnimation.rainbow(
     `\nWelcome to the F1 Challenge, ${playerName}!\n`
   );
@@ -277,7 +280,6 @@ try {
   await question3();
   await question4();
   await question5();
-  console.clear();
   position();
 } catch (error) {
   process.on("uncaughtException", (error) => {
