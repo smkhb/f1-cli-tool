@@ -3,10 +3,12 @@
   "version": "1.0.4",
   "main": "index.js",
   "type": "module",
-  "bin": "./index.js",
+  "bin": {
+    "f1quiz": "index.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/smkhb/f1quiz.git"
+    "url": "git+https://github.com/smkhb/f1quiz.git"
   },
   "homepage": "https://github.com/smkhb/f1quiz#readme",
   "bugs": {
