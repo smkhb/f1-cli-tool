@@ -12,13 +12,17 @@
   "bugs": {
     "url": "https://github.com/smkhb/f1quiz/issues"
   },
+  "keywords": [
+    "cli",
+    "quiz",
+    "f1"
+  ],
+  "author": "Samuel Bernardo",
+  "license": "MIT",
+  "description": "A command-line quiz about Formula 1 trivia.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@inquirer/prompts": "^7.5.3",
     "chalk": "^5.4.1",
